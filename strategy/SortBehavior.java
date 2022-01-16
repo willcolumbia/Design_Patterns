@@ -1,6 +1,10 @@
 package strategy;
 import java.util.ArrayList;
-
-public interface SortBehavior{
+/**
+ * interface used by bubbleSort and insertionSort 
+ * Listing has a sorting behavior 
+ * @author Will Columbia
+ */
+public interface SortBehavior {
     public ArrayList<String> sort(ArrayList<String> data);
 }

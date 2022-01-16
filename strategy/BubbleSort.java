@@ -1,8 +1,10 @@
 package strategy;
 import java.util.ArrayList;
-
+/*
+using bubblesort code from https://stackabuse.com/bubble-sort-in-java/
+*/
 public class BubbleSort implements SortBehavior{
-    @Override
+    
     public ArrayList<String> sort(ArrayList<String> data) {
         String temp;
         boolean sorted = false;
@@ -14,9 +16,13 @@ public class BubbleSort implements SortBehavior{
                     data.set(i, data.get(i+1));
                     data.set(i+1, temp);
                     sorted = false;
-                }
+                }   
             }
         }
-        return data; 
+        return data;
     }
 }
+    /**
+     * didnt think I would need to comment on this class considering I am not the author
+     */
+        
