@@ -2,7 +2,10 @@ package Singleton;
 
 import java.util.Random;
 import java.util.Scanner;
-
+/**
+ * A math game that gives the user a random simple math equations and gives points per correct answer
+ * @author Will Columbia
+ */
 
 
 public class MathGame {
@@ -12,7 +15,13 @@ public class MathGame {
     private Scanner reader;
     private String[] operands;
     private int upper = 100;
-
+/**
+ * Creates a new random. 
+ * sets the mathgame 
+ * loads the different operands into a string array. 
+ * sets the scanner. 
+ * Prints out opening message
+ */
     private MathGame(){
         rand = new Random();
         this.mathGame = mathGame;
@@ -20,7 +29,11 @@ public class MathGame {
          this.reader = new Scanner(System.in);
         System.out.println("Lets have fun with Math");
     }
-
+/**
+ * creates and returns a new instance of a mathGame if there is not one, otherwise it returns the current game
+ * @return new MathGame()
+ * @return mathGame
+ */
     public static MathGame getInstance(){
         if(mathGame == null){
             return new MathGame();
@@ -29,7 +42,11 @@ public class MathGame {
             return mathGame;
         }
     }
-
+/**
+ * Loops though the game if the user inputs P
+ * Stops the game if the user enters q
+ * if the user enters something other than p or q then an error message is printed and loops again
+ */
     public void play(){
         boolean playboi = true;
         while(playboi){
@@ -50,7 +67,16 @@ public class MathGame {
         }
        }
     }
-
+/**
+ * creates two random numbers for that will be used in the equation
+ * gets a random operand from the array
+ * prints out the randomized equation and takes in the users answer
+ * checks if the users answer is correct or incorrect
+ * if correct, the user is given a point
+ * if incorrect, the correct answer is displayed 
+ * When dividing, the answer is rounded to the first decimal 
+ * @return false
+ */
     private boolean playRound(){
         int num1 = rand.nextInt(upper);
         int num2 = rand.nextInt(upper);
