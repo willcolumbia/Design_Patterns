@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class LanguageSongs {
     private Scanner reader;
-
+    
     public LanguageSongs() {
         reader = new Scanner(System.in);
     }

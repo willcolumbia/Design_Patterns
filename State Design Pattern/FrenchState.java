@@ -1,12 +1,20 @@
 import java.util.ArrayList;
-
+/**
+ * a class for the french version of each song
+ */
 public class FrenchState implements State {
 private MusicBox box;
-
+/**
+ * sets box
+ * @param box
+ */
     public FrenchState(MusicBox box) {
         this.box = box;
     }
-
+/**
+ * creates a new arraylist with the french version of twinkle twinkle little star
+ * calls playsong
+ */
     @Override
     public void pressStarButton() {
         ArrayList<String> frenchTwinkle = new ArrayList<String>();
@@ -21,7 +29,10 @@ private MusicBox box;
 
         
     }
-
+/**
+ * creates a new arraylist with the french version of happy and you know it
+ * calls playsong
+ */
     @Override
     public void pressHappyButton() {
         ArrayList<String> frenchHappy = new ArrayList<String>();
@@ -37,19 +48,25 @@ private MusicBox box;
         box.playSong(songName, frenchHappy);
         
     }
-
+/**
+ * changes to english state
+ */
     @Override
     public void pressEnglishButton() {
         box.setState(box.getEnglishState());
         
     }
-
+/**
+ * prints if already in french state
+ */
     @Override
     public void pressFrenchButton() {
         System.out.println("you are already in the French state");
         
     }
-
+/**
+ * changed to spanish state
+ */
     @Override
     public void pressSpanishButton() {
         box.setState(box.getSpanishState());
